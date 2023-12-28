@@ -11,7 +11,6 @@ interface Props{
 
 export const ProductGridItem = ({product}:Props) => {
 
- 
 
   return (
     <div className="rounded-md overflow-hidden fade-in m-10">
