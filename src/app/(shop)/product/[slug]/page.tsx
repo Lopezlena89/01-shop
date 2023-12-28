@@ -10,7 +10,7 @@ interface Props{
   }
 }
 
-export default function({params}:Props) {
+export default function SlugPage({params}:Props) {
 
 
   const {slug} = params;

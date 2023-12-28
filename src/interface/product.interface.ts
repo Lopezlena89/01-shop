@@ -1,5 +1,5 @@
 export interface Product {
-    id:string,
+    //todo id:string,
     description: string;
     images: string[];
     inStock: number;

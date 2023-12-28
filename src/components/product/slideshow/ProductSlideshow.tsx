@@ -1,11 +1,5 @@
 'use client'
 
-import React, { useState } from 'react';
-
-
-import {Swiper as SwiperObject} from 'swiper';
-import {Swiper,SwiperSlide} from 'swiper/react';
-import {FreeMode,Navigation,Thumbs} from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -23,7 +17,7 @@ interface Props{
 
 export const ProductSlideshow = ({images,title,className}:Props) => {
 
-    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperObject>(null);
+    
 
   return (
       <div className={ className }>

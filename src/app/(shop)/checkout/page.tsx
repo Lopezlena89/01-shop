@@ -1,8 +1,7 @@
-import { QuantitySelector, Title } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
-import { initialData } from '../../../seed/seed';
-
+import { Title } from "@/components";
+import { initialData } from "@/seed/seed";
 
 const productInCart = [
   initialData.products[0],
@@ -10,7 +9,7 @@ const productInCart = [
   initialData.products[2],
 ]
 
-export default function() {
+export default function CheckOutPage() {
   return (
     <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
     
@@ -19,16 +18,17 @@ export default function() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
-          {/* Carrito */}
+          
 
           <div className="flex flex-col mt-5">
               <span className="text-xl">Ajustar Elementos</span>
               <Link href="/cart" className="underline mb-5">
-                Editar Carrito
-              </Link>
-          
 
-          {/* Items */}
+                Editar Carrito
+
+              </Link>
+
+         
 
           {
             productInCart.map(product =>(
@@ -47,23 +47,23 @@ export default function() {
 
                   <div>
                     <p>{product.title}</p>
-                    <p>$ {product.price} x  3</p>
-                    <p className="font-bold">Subtotal: $ {product.price * 3}</p>
+                    <p>{`$${product.price} x  3`}</p>
+                    <p className="font-bold">{`Subtotal: $${product.price * 3}`}</p>
                     <button className="underline mt-3"> 
                       Remover
                     </button>
 
                   </div>
 
-                  
               </div>
+
             ))
           }
           </div>
 
 
 
-          {/* Checkout - Resumen de la compra */}
+         
           
           <div className="bg-white- rounded-xl shadow-xl p-7"> 
 
@@ -78,7 +78,7 @@ export default function() {
               <p>123.1234.124</p>
             </div>
 
-            {/* Divider */}
+            
             <div className="w-full h-0.5 rounded bg-gray-200 mb-10"/>
 
 
@@ -100,13 +100,10 @@ export default function() {
             </div>
             <div className="mt-5 mb-2 w-full">
               <p className="mb-5">
-                  {/* Disclaimer */}
+                 
                 <span className="text-xs">
-                  Al hacer click en "Colocar Orden", aceptas nuestros <a href="#" className="underline">Terminos y condiciones</a> y <a href="#" className="underline">Politicas de privacidad</a>
+                  Al hacer click en Colocar Orden, aceptas nuestros <a href="/" className="underline">Terminos y condiciones</a> y <a href="/" className="underline">Politicas de privacidad</a>
                 </span>
-
-
-
               </p>
 
               <Link 
